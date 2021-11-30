@@ -2,55 +2,75 @@
 <html lang="en">
 
 <head>
+    <meta name="description" content="All you need to know about the Tesla Cyber Truck" />
+    <meta property="og:title" content="CYBERTRUCK" />
+    <meta property="og:description" content="All you need to know about the Tesla Cyber Truck" />
+    <meta property="og:image"
+        content="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2022-tesla-cyber-truck-mmp-1-1579127142.jpg?crop=0.788xw:1.00xh;0.107xw,0&resize=640:*" />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cyber Truck</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+
 </head>
 
 <body>
     <header>
-        <nav>
-            <span><img src="./assets/imgs/Cybertrucklogo.svg" alt=""></span>
-            <ul>
-                <li><a href="#">SPECS</a></li>
-                <li><a href="#">ABOUT</a></li>
+        <nav class="navbar">
+            <span><img class="brand" src="./assets/imgs/Cybertrucklogo.svg" alt="logo"></span>
+            <ul class="navbar-list">
+                <li class="nav-item"><a href="#">SPECS</a></li>
+                <li class="nav-item"><a href="#">ABOUT</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <section>
-            <h1>
-                Exoskeleton
-            </h1>
-            <p>
-                Cybertruck is built with an exterior shell made for ultimate durability and passenger protection.
-            </p>
+    <main class="main">
+        <div class="wrapper">
+            <section class="main-content">
+                <h1>
+                    Exoskeleton
+                </h1>
+                <p>
+                    Cybertruck is built with an exterior shell made for ultimate durability and passenger protection.
+                </p>
 
-            <h2>Ultra-hard 30x cold-rolled stainless steel</h2>
-            <p>If there was something better, we’d use it. Help eliminate dents, damage and long-term corrosion with a
-                smooth monochrome exoskeleton that puts the shell on the outside of the car and provides you and your
-                passengers maximum protection.</p>
+                <h2>Ultra-hard 30x cold-rolled stainless steel</h2>
+                <p>If there was something better, we’d use it. Help eliminate dents, damage and long-term corrosion with
+                    a
+                    smooth monochrome exoskeleton that puts the shell on the outside of the car and provides you and
+                    your
+                    passengers maximum protection.</p>
 
-            <img src="./assets/imgs/truck.png" alt="">
+                <div class="truck-image">
+                    <img src="./assets/imgs/truck.png" alt="tesla Cybertruck">
+                </div>
 
-        </section>
+            </section>
 
-        <section>
-            <h2>Order your Cybertruck</h2>
-            <form>
-                <label for="name">NAME:</label>
-                <input type="text" id="name">
+            <section class="buy">
+                <h2>Order your Cybertruck</h2>
+                <form class="buy-form">
+                    <div class="form-input">
+                        <label for="name">NAME:</label>
+                        <input type="text" id="name">
+                    </div>
 
-                <label for="email">EMAIL:</label>
-                <input type="email" id="email">
+                    <div class="form-input">
+                        <label for="email">EMAIL:</label>
+                        <input type="email" id="email">
+                    </div>
 
-                <button type="submit"> ORDER</button>
-            </form>
-        </section>
+                    <button type="submit"> ORDER</button>
+                </form>
+            </section>
+        </div>
+
 
     </main>
-    <footer>
+    <footer class="footer">
         <span>Copyright</span>
     </footer>
 
