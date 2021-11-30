@@ -70,12 +70,18 @@ body {
 .buy {
   margin-top: 50px;
 }
+
+.buy h2 {
+  margin: 0;
+}
 .buy-form {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .form-input {
   margin-right: 15px;
+  margin-top: 10px;
 }
 
 .form-input label {
@@ -93,4 +99,8 @@ body {
   padding: 5px 15px;
   height: 29.3px;
   align-self: flex-end;
+  margin-top: 10px;
+  cursor: pointer;
+  background-color: black;
+  color: white;
 }
