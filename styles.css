@@ -103,4 +103,6 @@ body {
   cursor: pointer;
   background-color: black;
   color: white;
+  outline: none;
+  border: none;
 }
