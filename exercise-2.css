@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 31px;
+  /* or 155% */
+
+  color: #111111;
+}
+
+h1,
+h2,
+h2,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.page-wrapper {
+  padding: 0 92px;
+  margin-top: 60px;
+  max-width: 70vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.intro header {
+  background-image: url(./assets/imgs/Zen-symbol.png);
+  background-size: contain;
+  background-position: top right;
+  background-repeat: no-repeat;
+}
+
+.intro header h1 {
+  font-family: Roboto;
+  font-size: 46px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 54px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #111111;
+}
+
+.intro header h2 {
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #6a6a6a;
+}
+
+.summary {
+  margin-top: 100px;
+  margin-bottom: 80px;
+  max-width: 40vw;
+}
+
+.preamble {
+  margin-left: 20vw;
+}
+
+.preamble h3 {
+  font-family: Roboto;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 31px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: black;
+}
+
+footer {
+  border-top: 2px solid #dcdcdc;
+  margin-top: 100px;
+  padding: 80px 0;
+
+  display: flex;
+  justify-content: space-between;
+}
