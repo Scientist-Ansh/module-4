@@ -1,0 +1,24 @@
+.gmail-icon {
+  content: url(./assets/imgs/gmail.svg);
+  width: 30px;
+}
+.linkedin-icon {
+  content: url(./assets/imgs/linkedin.svg);
+  width: 30px;
+}
+.github-icon {
+  content: url(./assets/imgs/github.svg);
+  width: 30px;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0.5deg);
+  }
+  50% {
+    transform: rotate(-0.5deg);
+  }
+  100% {
+    transform: rotate(0.5deg);
+  }
+}
