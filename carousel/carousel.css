@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(37, 36, 36);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+}
+
+/* caraousel */
+.carousel {
+  background-color: yellow;
+  margin: 100px auto;
+  width: 80%;
+  height: calc(45vw);
+  overflow: hidden;
+  position: relative;
+}
+
+.slideshow {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.slide:nth-child(1) {
+  background-color: gray;
+}
+.slide:nth-child(2) {
+  background-color: green;
+}
+.slide:nth-child(3) {
+  background-color: blue;
+}
+.slide:nth-child(4) {
+  background-color: gray;
+}
+.slide:nth-child(5) {
+  background-color: green;
+}
+
+.button {
+  position: absolute;
+}
+
+.button-prev {
+  left: 0;
+  top: 50%;
+}
+.button-next {
+  right: 0;
+  top: 50%;
+}
+
+.neon-text {
+  width: fit-content;
+  font-family: 'Sacramento', cursive;
+  color: #fff;
+  font-size: 3rem;
+  animation: pulsate 1.5s infinite alternate;
+  border: 0.2rem solid #fff;
+  border-radius: 2rem;
+  padding: 0.4em;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #bc13fe,
+    0 0 0.8rem #bc13fe, 0 0 2.8rem #bc13fe, inset 0 0 1.3rem #bc13fe;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #bc13fe,
+    0 0 82px #bc13fe, 0 0 92px #bc13fe, 0 0 102px #bc13fe, 0 0 151px #bc13fe;
+}
