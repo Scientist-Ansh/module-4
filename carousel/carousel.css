@@ -81,7 +81,7 @@ body {
   font-family: 'Sacramento', cursive;
   color: #fff;
   font-size: 3rem;
-  animation: pulsate 1.5s infinite alternate;
+  /* animation: go 1.5s infinite; */
   border: 0.2rem solid #fff;
   border-radius: 2rem;
   padding: 0.4em;

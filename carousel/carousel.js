@@ -5,9 +5,8 @@ let slides = document.querySelectorAll('.slide');
 let previousButton = document.querySelector('.button-prev');
 let nextButton = document.querySelector('.button-next');
 
-// making nav
+// making nav and adding it to the Dom
 let navigation = document.querySelector('.navigation');
-
 let n = 1;
 let navs = '';
 for (let slide of slides) {
@@ -16,11 +15,9 @@ for (let slide of slides) {
 }
 navigation.innerHTML = navs;
 
+// adding navigation functionality to the navs on click
 let navItems = document.querySelectorAll('.nav');
-console.log(navItems);
-
 let index = 1;
-
 for (let nav of navItems) {
   console.log(nav);
   nav.addEventListener('click', function () {
@@ -30,8 +27,6 @@ for (let nav of navItems) {
     slideshow.style.transform = `translateX(${slideWidth * -index}px)`;
   });
 }
-
-console.log(slides.length);
 
 // making clones and appending them to both ends
 const firstClone = slides[0].cloneNode(true);
@@ -50,6 +45,7 @@ slides = document.querySelectorAll('.slide');
 const slideWidth = carousel.clientWidth;
 slideshow.style.transform = `translateX(${slideWidth * -index}px)`;
 
+// making buttons work
 previousButton.addEventListener('click', function () {
   if (index === 0) {
     return;
@@ -76,8 +72,7 @@ nextButton.addEventListener('click', function () {
   slideshow.style.transform = `translateX(${slideWidth * -index}px)`;
 });
 
-console.log(slides.length);
-
+// handling the last slides transition
 slideshow.addEventListener('transitionend', function () {
   if (index === 0) {
     slideshow.style.transition = 'none';
@@ -90,6 +85,7 @@ slideshow.addEventListener('transitionend', function () {
   }
 });
 
+// adding navigation on key events
 window.addEventListener('keyup', function (e) {
   if (e.code === 'ArrowRight') {
     if (index === slides.length - 1) {
