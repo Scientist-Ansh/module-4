@@ -4,9 +4,34 @@ let slideshow = document.querySelector('.slideshow');
 let slides = document.querySelectorAll('.slide');
 let previousButton = document.querySelector('.button-prev');
 let nextButton = document.querySelector('.button-next');
-console.log(slides.length);
+
+// making nav
+let navigation = document.querySelector('.navigation');
+
+let n = 1;
+let navs = '';
+for (let slide of slides) {
+  navs = navs + `<span id=${n} class="nav">${n}</span>`;
+  n = n + 1;
+}
+navigation.innerHTML = navs;
+
+let navItems = document.querySelectorAll('.nav');
+console.log(navItems);
 
 let index = 1;
+
+for (let nav of navItems) {
+  console.log(nav);
+  nav.addEventListener('click', function () {
+    index = parseInt(nav.id);
+    slideshow.style.transition = '1s';
+
+    slideshow.style.transform = `translateX(${slideWidth * -index}px)`;
+  });
+}
+
+console.log(slides.length);
 
 // making clones and appending them to both ends
 const firstClone = slides[0].cloneNode(true);
@@ -61,6 +86,34 @@ slideshow.addEventListener('transitionend', function () {
   } else if (index === slides.length - 1) {
     slideshow.style.transition = 'none';
     index = 1;
+    slideshow.style.transform = `translateX(${slideWidth * -index}px)`;
+  }
+});
+
+window.addEventListener('keyup', function (e) {
+  if (e.code === 'ArrowRight') {
+    if (index === slides.length - 1) {
+      return;
+    }
+    console.log(index);
+    index += 1;
+    console.log(index);
+
+    slideshow.style.transition = '1s';
+    console.log(`translateX(${slideWidth * -index}px)`);
+    slideshow.style.transform = `translateX(${slideWidth * -index}px)`;
+  }
+
+  if (e.code === 'ArrowLeft') {
+    if (index === 0) {
+      return;
+    }
+    console.log(index);
+    index -= 1;
+    console.log(index);
+
+    slideshow.style.transition = '1s';
+    console.log(`translateX(${slideWidth * -index}px)`);
     slideshow.style.transform = `translateX(${slideWidth * -index}px)`;
   }
 });

@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: rgb(37, 36, 36);
+  background-color: turquoise;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,8 +14,8 @@ body {
 
 /* caraousel */
 .carousel {
-  background-color: yellow;
-  margin: 100px auto;
+  background-color: turquoise;
+  margin: 50px auto 50px;
   width: 80%;
   height: calc(45vw);
   overflow: hidden;
@@ -37,6 +37,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+.one {
+  position: absolute;
 }
 
 .slide:nth-child(1) {
@@ -85,4 +89,26 @@ body {
     0 0 0.8rem #bc13fe, 0 0 2.8rem #bc13fe, inset 0 0 1.3rem #bc13fe;
   text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #bc13fe,
     0 0 82px #bc13fe, 0 0 92px #bc13fe, 0 0 102px #bc13fe, 0 0 151px #bc13fe;
+}
+
+img {
+  width: 100%;
+}
+
+span {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: brown;
+  color: whitesmoke;
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+.nav.active {
+  background-color: white;
+  color: black;
+}
+
+.navigation {
+  margin-bottom: 40px;
 }
