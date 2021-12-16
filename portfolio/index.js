@@ -44,14 +44,7 @@ gsap.from(introPic, {
   duration: 2,
 });
 
-let skillsSection = document.querySelector('.skills');
-
-let skills = document.querySelector('#skills-canvas');
-
-console.log(skills);
-
-gsap.from(skills, {
-  trigger: skills,
-  x: 500,
-  duration: 2,
+document.querySelector('.frame').addEventListener('click', function () {
+  document.querySelector('.top').classList.add('open');
+  document.querySelector('.message').classList.add('pull');
 });
