@@ -1,17 +1,19 @@
-const canvas = document.getElementById("canvas");
+const canvas = document.getElementById('skills-canvas');
+
+console.log(canvas);
 
 const texts = [
-  "HTML5",
-  "Javascript",
-  "CSS3",
-  "ReactJS",
-  "React Native",
-  "NextJs",
-  "GraphQl",
-  "Python",
-  "Firebase",
-  "NodeJs",
-  "Redux",
+  'HTML5',
+  'Javascript',
+  'CSS3',
+  'ReactJS',
+  'React Native',
+  'NextJs',
+  'GraphQl',
+  'Python',
+  'Firebase',
+  'NodeJs',
+  'Redux',
 ];
 const counts = [1, 3, 4, 3, 1];
 
@@ -50,8 +52,8 @@ function wordSphere(canvas, texts, counts, options) {
     rz = initialRotationZ;
 
   // canvas setup
-  let ctx = canvas.getContext("2d");
-  ctx.textAlign = "center";
+  let ctx = canvas.getContext('2d');
+  ctx.textAlign = 'center';
 
   // Hi-DPI support
   canvas.width = width * 2;
@@ -63,12 +65,12 @@ function wordSphere(canvas, texts, counts, options) {
   let clicked = false,
     lastX,
     lastY;
-  canvas.addEventListener("mousedown", (event) => {
+  canvas.addEventListener('mousedown', (event) => {
     clicked = true;
     lastX = event.screenX;
     lastY = event.screenY;
   });
-  canvas.addEventListener("mousemove", (event) => {
+  canvas.addEventListener('mousemove', (event) => {
     if (!clicked) return;
     [dx, dy] = [event.screenX - lastX, event.screenY - lastY];
     [lastX, lastY] = [event.screenX, event.screenY];
@@ -83,8 +85,8 @@ function wordSphere(canvas, texts, counts, options) {
 
     if (!looping) startLoop();
   });
-  canvas.addEventListener("mouseup", (e) => (clicked = false));
-  canvas.addEventListener("mouseleave", (e) => (clicked = false));
+  canvas.addEventListener('mouseup', (e) => (clicked = false));
+  canvas.addEventListener('mouseleave', (e) => (clicked = false));
 
   function rot(x, y, t) {
     return [
